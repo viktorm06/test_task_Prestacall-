@@ -32,7 +32,7 @@ class StatusChecker implements ShouldQueue
      */
     public function handle()
     {
-        $users = User::all();
+        $users = User::where('status', 1)->get();
 
         foreach ($users as $user) {
 
